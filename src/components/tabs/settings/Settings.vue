@@ -1,12 +1,18 @@
 <template>
   <div class="podlove-settings">
-    <div class="podlove-settings__footer">
-      <a class="podlove-settings__version" title="Export Debug State" :href="exportStore()" download="podlove-web-player-debug.json">Podlove Web Player v{{version}}</a>
+    <div class="podlove-settings--input">
+      <label>Volume</label>
+      <Slider min="50" max="150" value="100"></Slider>
+    </div>
+    <div class="podlove-settings--footer">
+      <a class="podlove-settings--version" title="Export Debug State" :href="exportStore()" download="podlove-web-player-debug.json">Podlove Web Player v{{version}}</a>
     </div>
   </div>
 </template>
 
 <script>
+  import Slider from 'shared/Slider.vue'
+
   import store from 'store'
 
   const exportStore = () => {
@@ -21,6 +27,9 @@
     },
     methods: {
       exportStore
+    },
+    components: {
+      Slider
     }
   }
 </script>
@@ -33,11 +42,11 @@
     padding: $padding;
   }
 
-  .podlove-settings__footer {
+  .podlove-settings--footer {
     text-align: right;
   }
 
-  .podlove-settings__version {
+  .podlove-settings--version {
     font-size: 0.8rem;
     color: #444;
   }

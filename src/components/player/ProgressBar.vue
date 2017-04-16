@@ -84,10 +84,12 @@
   @import 'variables';
   @import 'range-resets';
 
+  $progress-bar-height: 15px;
+
   .podlove-player--progress-bar {
     width: 100%;
     position: relative;
-    height: $padding;
+    height: $progress-bar-height;
     transition: opacity ($animation-duration / 2), height $animation-duration;
     opacity: 1;
 
@@ -102,7 +104,7 @@
         opacity: 0;
       }
 
-      height: $padding * 2;
+      height: $progress-bar-height * 2;
     }
   }
 
