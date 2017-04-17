@@ -59,6 +59,11 @@ const setVolume = volume => ({
   payload: volume
 })
 
+const setRate = rate => ({
+  type: 'SET_RATE',
+  payload: rate
+})
+
 export {
   setPlaytime,
   updatePlaytime,
@@ -73,5 +78,6 @@ export {
   idle,
   toggleTimerMode,
   loading,
-  setVolume
+  setVolume,
+  setRate
 }

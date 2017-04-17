@@ -27,6 +27,11 @@
         thumbPosition: relativePosition(this.value, this.min || 0, this.max || 100)
       }
     },
+    watch: {
+      value: function () {
+        this.thumbPosition = relativePosition(this.value, this.minValue, this.maxValue)
+      }
+    },
     computed: {
       minValue: function () {
         return isUndefined(this.min) ? 0 : this.min
@@ -77,7 +82,7 @@
       position: absolute;
       top: 0;
       border: 1px solid;
-      margin-top: -5px;
+      margin: -5px 0 0 -6px;
       height: 14px;
       width: 6px;
       pointer-events: none;
