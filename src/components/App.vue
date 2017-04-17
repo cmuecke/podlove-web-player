@@ -53,6 +53,8 @@
     max-width: $width-xl;
     min-width: $width-xs;
 
+    border: 1px solid rgba($accent-color, 0.2);
+
     @include font();
   }
 </style>
