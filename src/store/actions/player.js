@@ -54,6 +54,11 @@ const loading = () => ({
   type: 'LOADING'
 })
 
+const setVolume = volume => ({
+  type: 'SET_VOLUME',
+  payload: volume
+})
+
 export {
   setPlaytime,
   updatePlaytime,
@@ -67,5 +72,6 @@ export {
   restart,
   idle,
   toggleTimerMode,
-  loading
+  loading,
+  setVolume
 }

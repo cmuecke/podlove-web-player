@@ -5,6 +5,7 @@
         :min="minValue"
         :max="maxValue"
         :value="value"
+        :step="sliderSteps"
         v-on:input="onSliderInput"
         v-on:change="onSliderChange"
       />
@@ -17,7 +18,7 @@
   import { isUndefined } from 'lodash'
 
   const relativePosition = (current = 0, minimum = 0, maximum = 0) =>
-    (((parseInt(current, 10) - parseInt(minimum, 10)) * 100) / (parseInt(maximum, 10) - parseInt(minimum, 10))) + '%'
+    (((parseFloat(current, 10) - parseFloat(minimum, 10)) * 100) / (parseFloat(maximum, 10) - parseFloat(minimum, 10))) + '%'
 
   export default {
     props: ['min', 'max', 'step', 'value', 'onChange', 'onInput'],
@@ -32,6 +33,9 @@
       },
       maxValue: function () {
         return isUndefined(this.max) ? 100 : this.max
+      },
+      sliderSteps: function () {
+        return isUndefined(this.step) ? 0.1 : this.step
       }
     },
     mounted: function () {
