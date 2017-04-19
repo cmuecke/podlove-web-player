@@ -53,7 +53,6 @@
   .podlove-player--control {
     width: 100%;
     display: flex;
-    margin-bottom: $margin;
 
     .podlove-player--download, .podlove-player--share {
       width: 10%;

@@ -84,7 +84,7 @@
   @import 'variables';
   @import 'range-resets';
 
-  $progress-bar-height: 15px;
+  $progress-bar-height: 44px;
 
   .podlove-player--progress-bar {
     width: 100%;
@@ -103,8 +103,6 @@
       .podlove-player--progress-thumb {
         opacity: 0;
       }
-
-      height: $progress-bar-height * 2;
     }
   }
 
@@ -113,7 +111,7 @@
     position: absolute;
     width: 100%;
     left: 0;
-    top: 2px;
+    top: calc(50% - 1px);
     height: 2px;
     background-color: rgba($accent-color, 0.25);
     pointer-events: none;
@@ -123,17 +121,16 @@
     display: block;
     position: absolute;
     left: 0;
-    top: 2px;
+    top: calc(50% - 1px);
     height: 2px;
     pointer-events: none;
   }
 
   .podlove-player--progress-thumb {
     position: absolute;
-    top: 0;
     border: 1px solid;
-    margin-top: -5px;
     height: 14px;
+    top: calc(50% - 7px);
     width: 6px;
     pointer-events: none;
   }
@@ -143,7 +140,7 @@
     opacity: 1;
     position: absolute;
     height: 2px;
-    top: 2px;
+    top: calc(50% - 1px);
     left: 0;
     pointer-events: none;
   }

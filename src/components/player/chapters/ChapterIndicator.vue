@@ -38,7 +38,7 @@
     position: absolute;
     width: 2px;
     height: 2px;
-    top: 2px;
+    top: calc(50% - 1px);
     pointer-events: none;
 
     &.last {

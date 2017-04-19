@@ -60,7 +60,7 @@
 
 <style lang="scss">
   @import 'variables';
-  $slider-height: 15px;
+  $slider-height: 44px;
 
   .podlove-player--slider {
     height: $slider-height;
@@ -72,7 +72,7 @@
       width: 100%;
       position: absolute;
       left: 0;
-      top: 2px;
+      top: calc(50% - 1px);
       height: 2px;
       pointer-events: none;
       background-color: rgba($accent-color, 0.5);
@@ -80,9 +80,8 @@
 
     .podlove-player--slider--thumb {
       position: absolute;
-      top: 0;
+      top: calc(50% - 7px);
       border: 1px solid;
-      margin: -5px 0 0 -6px;
       height: 14px;
       width: 6px;
       pointer-events: none;
