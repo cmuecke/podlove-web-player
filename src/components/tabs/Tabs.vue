@@ -10,7 +10,7 @@
         <span slot="title">Settings</span>
       </TabHeaderItem>
     </TabHeader>
-    <TabBody :active="tabs.chapters" v-iscroll v-if="chapters.length > 0">
+    <TabBody :active="tabs.chapters" v-if="chapters.length > 0">
       <ChaptersTab />
     </TabBody>
     <TabBody :active="tabs.settings">

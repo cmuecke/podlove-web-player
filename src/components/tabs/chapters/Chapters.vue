@@ -25,6 +25,7 @@
 
   .podlove-chapters {
     width: 100%;
-    padding: $padding 0;
+    padding: 0;
+    padding-bottom: $padding;
   }
 </style>
