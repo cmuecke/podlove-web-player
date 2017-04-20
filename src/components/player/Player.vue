@@ -1,6 +1,6 @@
 <template>
   <div class="podlove-player" :class="playstate">
-    <div class="podlove-player--control">
+    <div class="podlove-player--control" :class="playstate">
       <div class="podlove-player--download"></div>
       <ControlBar class="podlove-player--control-bar"/>
       <div class="podlove-player--share" v-if="reference.share && reference.config"><ShareButton /></div>
@@ -53,6 +53,10 @@
   .podlove-player--control {
     width: 100%;
     display: flex;
+
+    &.start {
+      margin-bottom: $margin;
+    }
 
     .podlove-player--download, .podlove-player--share {
       width: 10%;

@@ -46,6 +46,7 @@
     "clipboard": "1.6.0",
     "color": "1.0.3",
     "detect-browser": "1.6.2",
+    "foundation": "^4.2.1-1",
     "hashcode": "1.0.3",
     "howler": "2.0.3",
     "iframe-resizer": "3.5.7",
